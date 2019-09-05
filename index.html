@@ -20,9 +20,10 @@ div{
 <button id="playMe">Play Me</button>
 <button id="playFast">Play Fast</button>
 <button id="playFromMiddle">Play From Middle</button>
+<button id="stopPlay">Stop Video</button>
 </div>
 <video width="400" id="myVideo" controls>
-<source src="https://github.com/seattleacademy/1902-3/raw/master/video/myvideo.mp4" type="video/mp4">
+<source src="https://github.com/hudsonlennard/1902-3/raw/master/video/WIN_20190903_11_04_51_Pro.mp4">
 Your browser does not support HTML5 video.
 </video>
 <div>Hello <span>World</span></div>
@@ -33,10 +34,11 @@ vid = document.getElementById("myVideo");
 document.getElementById("playMe").addEventListener("click",playMe);
 document.getElementById("playFast").addEventListener("click",playFast);
 document.getElementById("playFromMiddle").addEventListener("click",playFromMiddle);
+document.getElementById("stopPlay").addEventListener("click",stopPlay);
 
 function playMe(e){
   console.log("Button Clicked");
-  vid.playbackRate = .5;
+  vid.playbackRate = 1;
   vid.play();
 }
 
@@ -48,6 +50,13 @@ function playFast(e){
 function playFromMiddle(e){
   vid.currentTime = 5;
   vid.play();
+}
+
+function stopPlay(e){
+  console.log("Button Clicked")
+  vid.playbackrate = 5;
+  vid.pause();
+ 
 }
     </script>
 </body>
